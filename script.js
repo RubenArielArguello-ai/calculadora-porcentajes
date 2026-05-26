@@ -10,6 +10,7 @@ let esperandoSegundo = false;
 // ── FUNCIONES ─────────────────────────────────────────────
 
 function ingresarNum(n) {
+  console.log('boton presionado:', n);
   // Esta función se ejecuta cada vez que el usuario toca un número
 
   if (!esperandoSegundo) {
