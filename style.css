@@ -38,7 +38,7 @@ body {
 #expresion {
   /* línea pequeña de arriba: muestra el cálculo en progreso */
   font-size: 13px;
-  color: #555;
+  color: white;
   text-align: right;
   min-height: 18px;
 }

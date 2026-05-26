@@ -90,5 +90,5 @@ function limpiar() {
   esperandoSegundo = false;
 
   document.getElementById('resultado').textContent = '0';
-  document.getElementById('expresion').textContent = '';
+  document.getElementById('expresion').textContent = 'ingresa % de';
 }
