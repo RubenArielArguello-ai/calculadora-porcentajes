@@ -73,12 +73,11 @@ function actualizarVisor() {
     // Solo hay primer número
     document.getElementById('resultado').textContent =
       primerNumero || '0';
-    document.getElementById('expresion').textContent = '';
+    document.getElementById('expresion').textContent = primerNumero ?  'ingresa % de' : '';
 
   } else {
     // Ya presionó "% de", muestra todo el cálculo en progreso
-    document.getElementById('resultado').textContent =
-      segundoNumero || '0';
+    document.getElementById('resultado').textContent = segundoNumero ||'0';
     document.getElementById('expresion').textContent =
       primerNumero + '% de ' + (segundoNumero || '...');
   }
