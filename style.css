@@ -1,0 +1,133 @@
+/* Resetea márgenes por defecto del navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0f;
+  display: flex;
+  justify-content: center;   /* centra horizontalmente */
+  align-items: center;       /* centra verticalmente */
+  height: 100vh;             /* 100% de la pantalla */
+  font-family: monospace;
+}
+
+.calculadora {
+  background-color: #1a1a2e;
+  width: 300px;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+  /* sombra: X Y difuminado color */
+}
+
+/* ── VISOR ─────────────────────────── */
+#visor {
+  background-color: #060809;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 20px;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;    /* apila expresion arriba, resultado abajo */
+  justify-content: space-between;
+}
+
+#expresion {
+  /* línea pequeña de arriba: muestra el cálculo en progreso */
+  font-size: 13px;
+  color: #555;
+  text-align: right;
+  min-height: 18px;
+}
+
+#resultado {
+  /* número grande */
+  font-size: 42px;
+  color: #c8a84b;            /* dorado */
+  text-align: right;
+
+  /* animación suave cuando cambia el número */
+  transition: color 0.2s;
+}
+
+/* clase que se agrega con JS cuando el resultado aparece */
+#resultado.flash {
+  color: #ffffff;
+}
+
+/* ── BOTONES ────────────────────────── */
+.botones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 columnas iguales */
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+button {
+  font-size: 20px;
+  height: 65px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #0f3460;
+  color: white;
+
+  /* efecto 3D: sombra abajo simula profundidad */
+  box-shadow: 0 6px 0 #0a2040;
+
+  /* transición suave al presionar */
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+
+button:hover {
+  background-color: #1a4a80;
+}
+
+button:active {
+  /* se hunde 5px al presionar */
+  transform: translateY(5px);
+  box-shadow: 0 1px 0 #0a2040;
+}
+
+/* Botón % de → color especial */
+.btn-especial {
+  background-color: #2d1b6e;
+  color: #c8a84b;
+  font-size: 16px;
+  box-shadow: 0 6px 0 #1a0e40;
+}
+
+/* Botón = → dorado */
+.btn-igual {
+  background-color: #c8a84b;
+  color: #1a1000;
+  font-weight: bold;
+  font-size: 26px;
+  box-shadow: 0 6px 0 #806020;
+}
+
+.btn-igual:active {
+  box-shadow: 0 1px 0 #806020;
+}
+
+/* Botón AC → rojo, ancho completo */
+.btn-limpiar {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  background-color: #3a1010;
+  color: #ff8080;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #200808;
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+
+.btn-limpiar:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #200808;
+}
